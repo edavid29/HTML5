@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Diseñe UNA SOLUCION que lea el nombre de un empleado, su salario básico por hora y el número de horas trabajadas en un mes. Calcular su salario mensual y el bono adicional que recibiría por transporte. Considerar que la empresa pagara el bono por transporte solamente si su salario mensual es menor a una remuneración mínima vital (RMV =1,025 soles) correspondiendo al 10% del salario mensual. Visualizar, el nombre del empleado, su salario mensual, el bono por transporte si lo recibiera y el importe a depositar en la cuenta del empleado.</h3>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var nombre,salhor,horasmes;
+                //2. Fase entrada/lectura de datos
+                nombre=prompt("Ingrese el nombre del empleado");
+                salhor=parseFloat(prompt("Ingrese el salario básico por hora del empleado"));
+                horasmes=parseFloat(prompt("Ingrese la cantidad de horas trabajadas en el mes"));
+                //3. Fase del procesamiento de datos
+                salmen=salhor*horasmes
+	            bono=salmen*10/100
+                if (salmen<=1025) {
+                    depo=salmen+bono
+                    //4. Fase de salida
+                    document.write("======= Monto de Deposito ======="+"<br>");
+                    document.write("Empleado: "+nombre+"<br>");
+                    document.write("Salario mensual: " +salmen+"<br>");
+                    document.write("Bono a recibir: " +bono+"<br>");
+                    document.write("Monto a depositar: " +depo+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                }
+                else{
+                    depo=salmen
+                    document.write("======= Monto de Deposito ======="+"<br>");
+                    document.write("Empleado: "+nombre+"<br>");
+                    document.write("Salario mensual: " +salmen+"<br>");
+                    document.write("Monto a depositar: " +depo+"<br>");
+                    document.write(" ==========================================="+"<br>");
+
+                }
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

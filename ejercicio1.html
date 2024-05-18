@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercio1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Diseñe UNA SOLUCION que lea dos números ingresados, calcule la suma y visualice los dos números leídos y la suma solo si el resultado es par.</h3>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var a,b,sum;
+                //2. Fase entrada/lectura de datos
+                a=parseInt(prompt("Ingrese el 1er número"));
+                b=parseInt(prompt("Ingrese el 2do número"));
+                //3. Fase del procesamiento de datos
+                sum=a+b
+                if (sum % 2==0) {
+                    mensaje="El resultado de la suma es "+sum+" Número PAR";
+                //4. Fase de salida
+                    document.write("======= Suma ======="+"<br>");
+                    document.write(""+a+"+"+b+"="+sum+"<br>");
+                    document.write(""+mensaje+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                }
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

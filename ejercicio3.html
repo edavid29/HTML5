@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>Diseñe UNA SOLUCION que permita el ingreso el nombre de un estudiante, el nombre del curso, su nota final, el número de clases del ciclo y el número de clases que no asistió. En el caso que las ausencias superen el 20% del número de clases del ciclo su nota definitiva será 0 (cero). Visualice el nombre, la asignatura, la nota y una anotación, en el caso de la nota cero la anotación será el motivo de la desaprobación. </h3>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var nombre,curso,nota,clases,faltas;
+                //2. Fase entrada/lectura de datos
+                nombre=prompt("Ingrese el nombre del alumno");
+                curso=prompt("Ingrese el nombre del curso");
+                nota=parseInt(prompt("Ingrese la nota del alumno"));
+                clases=parseInt(prompt("Ingrese el total de clases del ciclo"));
+                faltas=parseInt(prompt("Ingrese la cantidad de clases que el alumno no asistió"));
+                //3. Fase del procesamiento de datos
+               if (faltas>=clases*20/100) {
+                    nota=0
+                    anotacion="Las ausencias superen el 20% del número de clases del ciclo";
+                    //4. Fase de salida
+                    document.write("======= Nota final ======="+"<br>");
+                    document.write("Alumno: "+nombre+"<br>");
+                    document.write("Curso: "+curso+"<br>");
+                    document.write("Nota: "+nota+"<br>");
+                    document.write(""+anotacion+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                }
+                else{
+                    document.write("======= Nota final ======="+"<br>");
+                    document.write("Alumno: "+nombre+"<br>");
+                    document.write("Curso: "+curso+"<br>");
+                    document.write("Nota: "+nota+"<br>");
+                    document.write(" ===========================================")
+                }
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
